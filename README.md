@@ -1,9 +1,6 @@
-# [Your Name] — Profile & Mini-Portfolio
+# Tinevimbo Munjoma — Profile & Mini-Portfolio
 
-A semantic HTML5 profile and mini-portfolio page built for the CIS2103 Web
-Technologies course at Africa University, featuring an accessible "Contact
-Me" form validated natively (no JavaScript) and AI-assisted About-section
-copy.
+A semantic HTML5 profile and mini-portfolio page.
 
 ## View the Page
 
