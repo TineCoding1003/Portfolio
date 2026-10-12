@@ -88,21 +88,29 @@
             <h2>Contact</h2>
             <p>If you would like to get in touch, please feel free to reach out via email or connect with me on LinkedIn.</p>
        
-            <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" minlength="1" maxlength="50" required>
+                        <!-- CONTACT FORM: Tailwind utilities (Grid layout, Flexbox field groups, sm: variants) -->
+            <form id="contact-form" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="flex flex-col gap-1">
+                    <label for="name" class="font-semibold">Name:</label>
+                    <input class="w-full rounded-md border border-field bg-white px-3 py-2 text-ink" type="text" id="name" name="name" minlength="1" maxlength="50" autocomplete="name" required>
+                </div>
 
+                <div class="flex flex-col gap-1">
+                    <label for="email" class="font-semibold">Email:</label>
+                    <input class="w-full rounded-md border border-field bg-white px-3 py-2 text-ink" type="email" id="email" name="email" autocomplete="email" required>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <div class="flex flex-col gap-1 sm:col-span-2">
+                    <label for="phone" class="font-semibold">Phone:</label>
+                    <input class="w-full rounded-md border border-field bg-white px-3 py-2 text-ink" type="tel" id="phone" name="phone" autocomplete="tel" required>
+                </div>
 
-            <label for = "phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+                <div class="flex flex-col gap-1 sm:col-span-2">
+                    <label for="message" class="font-semibold">Message:</label>
+                    <textarea class="min-h-[8rem] w-full resize-y rounded-md border border-field bg-white px-3 py-2 text-ink" id="message" name="message" rows="5" required></textarea>
+                </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
+                <button class="w-full rounded-md bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark sm:col-span-2 sm:w-auto sm:justify-self-start" type="submit">Send</button>
             </form>
             </section>
     </main>
