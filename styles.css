@@ -135,3 +135,20 @@ main > article > * + * {
 #projects {
   border-left: 0.35rem solid var(--brand);
 }
+
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: var(--space-1);
+  padding: 0;
+  list-style: none;
+}
+ 
+#skills li {
+  padding: 0.75rem var(--space-2);
+  font-weight: 600;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--edge);
+  border-radius: 0.5rem;
+}
