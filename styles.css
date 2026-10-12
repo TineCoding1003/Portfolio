@@ -1,0 +1,46 @@
+:root {
+  /* colour */
+  --brand: #0f5c63;
+  --brand-dark: #0a4248;
+  --accent: #f2b134;
+  --ink: #1d2b30;
+  --paper: #eef3f4;
+  --surface: #ffffff;
+  --edge: #cfdcdf;
+ 
+  /* spacing scale (rem) – used for every padding / margin / gap */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+ 
+  /* type scale, ratio 1.25 */
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.5625rem;
+  --step-3: 1.9531rem;
+ 
+  --radius: 0.75rem;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0 solid; /* replaces Tailwind Preflight: lets `border` utilities work */
+}
+ 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ 
+input,
+textarea,
+button {
+  font: inherit;
+}
