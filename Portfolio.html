@@ -8,25 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tinevimbo Munjoma portifolio</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Hand-written, mobile-first CSS: page layout, typography, cards, skills grid -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind (Play CDN): used for the header/nav and the contact form.
+         Preflight is disabled because styles.css already contains the reset. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { DEFAULT: '#0f5c63', dark: '#0a4248' },
+                        accent: '#f2b134',
+                        ink: '#1d2b30',
+                        field: '#6b8288'
+                    },
+                    fontFamily: {
+                        heading: ['"Space Grotesk"', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
 </head>
 <body>
-    <header>
-       
-        <h1>Tinevimbo Munjoma</h1>
+    a class="skip-link" href="#main">Skip to main content</a>
 
-       
-        <p>Web Developer</p>
+    <!-- HEADER + NAV: Tailwind utilities (Flexbox + responsive variants) -->
+    <header id="home" class="bg-brand px-5 py-8 text-white sm:px-8 md:px-12 md:py-12">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-8 md:flex-row md:justify-between">
+            <div class="flex flex-col gap-4 text-center md:text-left">
+                <h1 class="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Tinevimbo Munjoma</h1>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>  
-            <a href="#contact">Contact</a>
-        </nav>
-        <img src ="OIP.webp" alt="Office space" width="300">
+                <p class="text-lg font-semibold text-accent">Web Developer</p>
+
+                <nav aria-label="Main navigation" class="flex flex-wrap justify-center gap-2 md:justify-start">
+                    <a class="rounded-md px-4 py-2 font-semibold hover:bg-brand-dark" href="#home">Home</a>
+                    <a class="rounded-md px-4 py-2 font-semibold hover:bg-brand-dark" href="#about">About</a>
+                    <a class="rounded-md px-4 py-2 font-semibold hover:bg-brand-dark" href="#skills">Skills</a>
+                    <a class="rounded-md px-4 py-2 font-semibold hover:bg-brand-dark" href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <img class="aspect-[4/3] w-full max-w-xs rounded-lg object-cover md:w-72 lg:w-80" src="OIP.webp" alt="Office space" width="300" height="225">
+        </div>
     </header>
    
-    <main>
+    <main id="main">
         <section id="about">
             <h2>About</h2>
             <p>I am Tinevimbo Munjoma, a second-year Computer Information Systems student who loves web development.My speciality is in writing clean code that delivers great user experiences. </p>
