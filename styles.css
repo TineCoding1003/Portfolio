@@ -94,3 +94,44 @@ button:focus-visible {
   top: var(--space-2);
   z-index: 10;
 }
+
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);   /* minmax(0,…) stops long content forcing overflow */
+  grid-template-areas:
+    "about"
+    "skills"
+    "projects"
+    "contact";
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: var(--space-3) var(--space-2) var(--space-4);
+}
+ 
+#about    { grid-area: about; }
+#skills   { grid-area: skills; }
+#projects { grid-area: projects; }
+#contact  { grid-area: contact; }
+ 
+/* Cards: deliberate padding + border + radius, one rhythm for all four */
+main > section,
+main > article {
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+}
+ 
+/* Vertical rhythm inside a card: space between siblings, never above the first */
+main > section > * + *,
+main > article > * + * {
+  margin-top: var(--space-2);
+}
+ 
+#projects {
+  border-left: 0.35rem solid var(--brand);
+}
